@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3901503306421578233}
   - component: {fileID: 3901503306421578232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: playerShip1_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1033506785283211374}
   - component: {fileID: 5012609589633624030}
   - component: {fileID: 9204781269919012922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,3 +269,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4e10d6194e9f445a0e35eefb12a844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
