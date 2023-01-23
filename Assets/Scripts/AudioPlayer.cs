@@ -30,9 +30,12 @@ public class AudioPlayer : MonoBehaviour
     private void PlayClip(AudioClip clip, float volume)
     {
         if (isCameraNotNull)
+        {
+            Vector3 cameraPos = mainCamera.transform.position;
             AudioSource.PlayClipAtPoint(clip,
-                mainCamera.transform.position,
+                cameraPos,
                 volume
             );
+        }
     }
 }
