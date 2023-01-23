@@ -13,11 +13,17 @@ public class Shooter : MonoBehaviour
     [Header("AI")] [SerializeField] private bool useAI;
     [SerializeField] private float firingRateVariance;
     [SerializeField] private float minimumFiringRate = 0.5f;
+    private AudioPlayer audioPlayer;
 
 
     private Coroutine firingCoroutine;
 
     [NonSerialized] public bool isFiring;
+
+    private void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
 
     private void Start()
     {
@@ -55,6 +61,9 @@ public class Shooter : MonoBehaviour
             if (rigidbody2D != null) rigidbody2D.velocity = transform.up * projectileSpeed;
 
             Destroy(projectilePrefab, projectileLifetime);
+
+            audioPlayer.PlayShootingClip();
+
             yield return new WaitForSeconds(GetRandomTime());
         }
     }
