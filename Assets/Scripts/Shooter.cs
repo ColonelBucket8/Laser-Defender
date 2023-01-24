@@ -53,14 +53,14 @@ public class Shooter : MonoBehaviour
     {
         while (true)
         {
-            GameObject instance = Instantiate(projectilePrefab,
+            GameObject projectileInstance = Instantiate(projectilePrefab,
                 transform.position,
                 Quaternion.identity);
 
-            var rigidbody2D = instance.GetComponent<Rigidbody2D>();
+            var rigidbody2D = projectileInstance.GetComponent<Rigidbody2D>();
             if (rigidbody2D != null) rigidbody2D.velocity = transform.up * projectileSpeed;
 
-            Destroy(projectilePrefab, projectileLifetime);
+            Destroy(projectileInstance, projectileLifetime);
 
             audioPlayer.PlayShootingClip();
 
