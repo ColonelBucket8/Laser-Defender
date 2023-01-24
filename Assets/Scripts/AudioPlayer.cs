@@ -2,19 +2,30 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
+    private static AudioPlayer instance;
     [Header("Shooting")] [SerializeField] private AudioClip shootingClip;
     [SerializeField] [Range(0f, 1f)] private float shootingVolume = 1f;
 
     [Header("Damage")] [SerializeField] private AudioClip damageClip;
     [SerializeField] [Range(0f, 1f)] private float damageVolume = 1f;
 
-    private bool isCameraNotNull;
-    private Camera mainCamera;
-
-    private void Start()
+    private void Awake()
     {
-        mainCamera = Camera.main;
-        isCameraNotNull = mainCamera != null;
+        ManageSingleton();
+    }
+
+    private void ManageSingleton()
+    {
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void PlayShootingClip()
@@ -29,13 +40,10 @@ public class AudioPlayer : MonoBehaviour
 
     private void PlayClip(AudioClip clip, float volume)
     {
-        if (isCameraNotNull)
-        {
-            Vector3 cameraPos = mainCamera.transform.position;
-            AudioSource.PlayClipAtPoint(clip,
-                cameraPos,
-                volume
-            );
-        }
+        Vector3 cameraPos = Camera.main.transform.position;
+        AudioSource.PlayClipAtPoint(clip,
+            cameraPos,
+            volume
+        );
     }
 }
