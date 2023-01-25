@@ -1138,7 +1138,10 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 939f1dedf7741cc43975a2d8728f4542, type: 2}
   - {fileID: 11400000, guid: 1b468f574decc2d4ead7869b99681e38, type: 2}
-  timeBetweenWaves: 3
+  - {fileID: 11400000, guid: 322ece2b4abd8984186a65587a6b0ede, type: 2}
+  - {fileID: 11400000, guid: 1b2ca330952b1724db89a7bd3249a981, type: 2}
+  - {fileID: 11400000, guid: b875e13a26641444d89b0c52caf9e9f6, type: 2}
+  timeBetweenWaves: 1
   isLooping: 1
 --- !u!1001 &202618057921694665
 PrefabInstance:
