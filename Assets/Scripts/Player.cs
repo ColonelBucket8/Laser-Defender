@@ -4,10 +4,10 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float paddingLeft;
-    [SerializeField] private float paddingRight;
-    [SerializeField] private float paddingTop;
-    [SerializeField] private float paddingBottom;
+    [SerializeField] public readonly float paddingBottom;
+    [SerializeField] public readonly float paddingLeft;
+    [SerializeField] public readonly float paddingRight;
+    [SerializeField] public readonly float paddingTop;
     private Vector2 maxBounds;
     private Vector2 minBounds;
     private Vector2 rawInput;
