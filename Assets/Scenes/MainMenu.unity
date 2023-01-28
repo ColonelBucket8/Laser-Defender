@@ -542,6 +542,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4898629153087228532, guid: b4a24d7dcd6d4a94d9e7a5378a60eee9, type: 3}
+      propertyPath: powerUpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f929261c145e6d04c98e60b6ba6286cf, type: 3}
+    - target: {fileID: 4898629153087228532, guid: b4a24d7dcd6d4a94d9e7a5378a60eee9, type: 3}
+      propertyPath: powerUpVolume
+      value: 0.132
+      objectReference: {fileID: 0}
     - target: {fileID: 4898629153087228534, guid: b4a24d7dcd6d4a94d9e7a5378a60eee9, type: 3}
       propertyPath: m_Name
       value: AudioPlayer

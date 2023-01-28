@@ -9,6 +9,10 @@ public class AudioPlayer : MonoBehaviour
     [Header("Damage")] [SerializeField] private AudioClip damageClip;
     [SerializeField] [Range(0f, 1f)] private float damageVolume = 1f;
 
+    [Header("PowerUp")] [SerializeField] private AudioClip powerUpClip;
+    [SerializeField] [Range(0f, 1f)] private float powerUpVolume = 1f;
+
+
     private void Awake()
     {
         ManageSingleton();
@@ -36,6 +40,11 @@ public class AudioPlayer : MonoBehaviour
     public void PlayDamageClip()
     {
         PlayClip(damageClip, damageVolume);
+    }
+
+    public void PlayPowerUpClip()
+    {
+        PlayClip(powerUpClip, powerUpVolume);
     }
 
     private void PlayClip(AudioClip clip, float volume)

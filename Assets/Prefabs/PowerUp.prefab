@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682337b69aebea44e9561dadd5aefd3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseFiringRateToReduce: 0.01
+  baseFiringRateToReduce: 0.05
 --- !u!1 &6986472361956913708
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a0ccdacb111e340a5f11b1198e3b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreToSpawn: 50
+  scoreToSpawn: 300
 --- !u!1 &7664442191391909369
 GameObject:
   m_ObjectHideFlags: 0
