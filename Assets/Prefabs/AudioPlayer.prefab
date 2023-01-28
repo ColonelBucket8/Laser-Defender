@@ -49,6 +49,8 @@ MonoBehaviour:
   shootingVolume: 0.084
   damageClip: {fileID: 8300000, guid: 94592d19779ab93438a2ae17ba5c5b6c, type: 3}
   damageVolume: 0.079
+  powerUpClip: {fileID: 8300000, guid: f929261c145e6d04c98e60b6ba6286cf, type: 3}
+  powerUpVolume: 0.137
 --- !u!82 &4898629153087228533
 AudioSource:
   m_ObjectHideFlags: 0

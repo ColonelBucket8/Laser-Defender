@@ -39,6 +39,11 @@ public class Health : MonoBehaviour
         return health;
     }
 
+    public void SetHealth(int value)
+    {
+        health = value;
+    }
+
     private void ShakeCamera()
     {
         if (cameraShake != null && applyCameraShake) cameraShake.Play();
