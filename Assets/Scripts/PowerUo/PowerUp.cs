@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    [SerializeField] private float baseFiringRateToReduce = 0.05f;
+
     private Shooter shooter;
+
 
     private void Awake()
     {
@@ -13,8 +16,10 @@ public class PowerUp : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            shooter.baseFiringRate -= 0.05f;
+            shooter.BaseFiringRate -= baseFiringRateToReduce;
+
             gameObject.SetActive(false);
+            if (shooter.BaseFiringRate <= 0.01) Destroy(gameObject);
         }
     }
 }

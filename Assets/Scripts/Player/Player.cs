@@ -4,15 +4,27 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] public readonly float paddingBottom;
-    [SerializeField] public readonly float paddingLeft;
-    [SerializeField] public readonly float paddingRight;
-    [SerializeField] public readonly float paddingTop;
+    [SerializeField] private float paddingBottom;
+    [SerializeField] private float paddingLeft;
+    [SerializeField] private float paddingRight;
+    [SerializeField] private float paddingTop;
     private Vector2 maxBounds;
     private Vector2 minBounds;
     private Vector2 rawInput;
 
     private Shooter shooter;
+
+    public float PaddingBottom => paddingBottom;
+
+    public float PaddingLeft => paddingLeft;
+
+    public float PaddingRight => paddingRight;
+
+    public float PaddingTop => paddingTop;
+
+    public Vector2 MaxBounds => maxBounds;
+
+    public Vector2 MinBounds => minBounds;
 
     private void Awake()
     {
@@ -41,8 +53,12 @@ public class Player : MonoBehaviour
         Vector2 delta = rawInput * (moveSpeed * Time.deltaTime);
         var newPos = new Vector2
         {
-            x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x + paddingLeft, maxBounds.x - paddingRight),
-            y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y + paddingBottom, maxBounds.y - paddingTop)
+            x = Mathf.Clamp(transform.position.x + delta.x,
+                minBounds.x + paddingLeft,
+                maxBounds.x - paddingRight),
+            y = Mathf.Clamp(transform.position.y + delta.y,
+                minBounds.y + paddingBottom,
+                maxBounds.y - paddingTop)
         };
 
         transform.position = newPos;

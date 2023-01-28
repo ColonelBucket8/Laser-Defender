@@ -779,10 +779,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 271992432, guid: 3de6483e2cc4acc4ca305cc7a4729e64, type: 3}
-      propertyPath: scoreToSpawn
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 6986472361956913706, guid: 3de6483e2cc4acc4ca305cc7a4729e64, type: 3}
       propertyPath: m_RootOrder
       value: 9

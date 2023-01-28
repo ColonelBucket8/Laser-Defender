@@ -8,7 +8,7 @@ public class Shooter : MonoBehaviour
     [Header("General")] [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed = 10f;
     [SerializeField] private float projectileLifetime = 5f;
-    [SerializeField] public float baseFiringRate = 1f;
+    [SerializeField] private float baseFiringRate = 1f;
 
     [Header("AI")] [SerializeField] private bool useAI;
     [SerializeField] private float firingRateVariance;
@@ -18,7 +18,13 @@ public class Shooter : MonoBehaviour
 
     private Coroutine firingCoroutine;
 
-    [NonSerialized] public bool isFiring;
+    [NonSerialized] private bool isFiring;
+
+    public float BaseFiringRate
+    {
+        get => baseFiringRate;
+        set => baseFiringRate = value;
+    }
 
     private void Awake()
     {

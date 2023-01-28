@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 5012609589633624030}
   - component: {fileID: 9204781269919012922}
   - component: {fileID: 4843116272542668557}
+  - component: {fileID: 9167777422828360153}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -217,10 +218,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  paddingBottom: 2
   paddingLeft: 0.5
   paddingRight: 0.5
   paddingTop: 5
-  paddingBottom: 2
 --- !u!50 &1033506785283211374
 Rigidbody2D:
   serializedVersion: 4
@@ -294,3 +295,15 @@ MonoBehaviour:
   useAI: 1
   firingRateVariance: 0
   minimumFiringRate: 0.1
+--- !u!114 &9167777422828360153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3901503306447158703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bafc64f7b61ae4389a22a658234193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
